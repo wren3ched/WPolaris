@@ -1,0 +1,62 @@
+/* Reset básico */
+body, h1, h2, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo y centrado */
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Títulos */
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Inputs */
+input {
+  width: 250px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botón */
+button {
+  width: 270px;
+  padding: 10px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
