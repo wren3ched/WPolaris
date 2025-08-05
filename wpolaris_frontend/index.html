@@ -7,11 +7,19 @@
 </head>
 <body>
   <h1>Desarrollado por Federico Panella / kilkSS</h1>
-  <h2>Login / Sign In</h2>
+
+  <h2>Login</h2>
   <input type="text" id="username" placeholder="Usuario">
-  <input type="text" id="password" placeholder="Password">
+  <input type="password" id="password" placeholder="Password">
   <button onclick="login()">Login</button>
   <button onclick="getVault()">Ver Vault</button>
+
+  <h2>Registro</h2>
+  <form id="register-form">
+    <input type="email" id="register-email" placeholder="Email" required>
+    <input type="password" id="register-password" placeholder="Password" required>
+    <button type="submit">Registrarse</button>
+  </form>
 
   <script src="script.js"></script>
 </body>

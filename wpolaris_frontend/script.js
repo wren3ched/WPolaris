@@ -39,3 +39,31 @@ async function getVault() {
     alert("Error al acceder al vault: " + data.detail);
   }
 }
+
+document.getElementById("register-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("register-email").value;
+  const password = document.getElementById("register-password").value;
+
+  try {
+    const response = await fetch("https://wpolaris-1.onrender.com/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Registro exitoso");
+    } else {
+      alert("Error: " + data.detail);
+    }
+  } catch (error) {
+    console.error("Error de red:", error);
+    alert("No se pudo conectar con el servidor");
+  }
+});
